@@ -56,42 +56,42 @@ function Index() {
       <Header />
 
       {/* HERO */}
-      <section id="home" className="relative overflow-hidden">
+      <section id="home" className="relative overflow-hidden min-h-[calc(100dvh-6rem)] flex items-center">
         <div className="absolute inset-0">
           <img src={hero} alt="Ambiente moderno com ripado, forro e iluminação embutida" className="w-full h-full object-cover" width={1920} height={1080} />
           <div className="absolute inset-0 bg-gradient-to-r from-ink/90 via-ink/75 to-ink/40" />
           <div className="absolute inset-0 bg-gradient-to-t from-ink/80 to-transparent" />
         </div>
-        <div className="relative container-x py-20 md:py-32 lg:py-40">
+        <div className="relative container-x py-10 md:py-14 lg:py-16">
           <div className="max-w-3xl">
-            <span className="eyebrow !bg-gold/20 !text-gold !border-gold/40">
-              <Sparkles className="h-3.5 w-3.5" /> 53 anos de tradição em Contagem/MG
+            <span className="eyebrow !bg-gold/20 !text-gold !border-gold/40 text-[11px] md:text-xs">
+              <Sparkles className="h-3 w-3" /> 53 anos de tradição em Contagem/MG
             </span>
-            <h1 className="mt-5 text-white text-4xl md:text-6xl lg:text-7xl font-extrabold leading-[1.05]">
+            <h1 className="mt-4 text-white text-3xl md:text-4xl lg:text-5xl font-extrabold leading-[1.1]">
               Forros, Pisos, Divisórias e Ripados para Obras{" "}
               <span className="text-gold">Residenciais e Comerciais</span>
             </h1>
-            <p className="mt-6 text-base md:text-lg text-white/85 max-w-2xl">
+            <p className="mt-4 text-sm md:text-base text-white/85 max-w-xl leading-relaxed">
               Soluções completas em acabamento, com produtos de qualidade, atendimento especializado e instalação profissional em Contagem, Belo Horizonte e região.
             </p>
-            <div className="mt-8 flex flex-wrap gap-3">
-              <a href={WA_LINK} target="_blank" rel="noopener noreferrer" className="btn-wa inline-flex items-center gap-2 px-6 py-3.5 rounded-full font-semibold">
-                <MessageCircle className="h-5 w-5" /> Solicitar orçamento pelo WhatsApp
+            <div className="mt-6 flex flex-wrap gap-3">
+              <a href={WA_LINK} target="_blank" rel="noopener noreferrer" className="btn-wa inline-flex items-center gap-2 px-5 py-3 rounded-full font-semibold text-sm">
+                <MessageCircle className="h-4 w-4" /> Solicitar orçamento pelo WhatsApp
               </a>
-              <a href="#produtos" className="btn-outline-gold !text-white inline-flex items-center gap-2 px-6 py-3.5 rounded-full font-semibold backdrop-blur-sm bg-white/5">
+              <a href="#produtos" className="btn-outline-gold !text-white inline-flex items-center gap-2 px-5 py-3 rounded-full font-semibold text-sm backdrop-blur-sm bg-white/5">
                 Ver produtos e soluções <ArrowRight className="h-4 w-4" />
               </a>
             </div>
-            <div className="mt-10 grid grid-cols-2 md:grid-cols-4 gap-4 max-w-2xl">
+            <div className="mt-8 grid grid-cols-2 md:grid-cols-4 gap-3 max-w-2xl">
               {[
                 { icon: Zap, label: "Atendimento rápido" },
                 { icon: Package, label: "Atacado e varejo" },
                 { icon: Wrench, label: "Instalação especializada" },
                 { icon: Award, label: "+50 anos de mercado" },
               ].map(({ icon: Icon, label }) => (
-                <div key={label} className="flex items-center gap-2.5 text-white/90 text-sm">
-                  <span className="flex h-9 w-9 items-center justify-center rounded-lg bg-gold/15 border border-gold/30">
-                    <Icon className="h-4 w-4 text-gold" />
+                <div key={label} className="flex items-center gap-2 text-white/90 text-xs md:text-sm">
+                  <span className="flex h-8 w-8 items-center justify-center rounded-md bg-gold/15 border border-gold/30">
+                    <Icon className="h-3.5 w-3.5 text-gold" />
                   </span>
                   <span className="font-medium leading-tight">{label}</span>
                 </div>
