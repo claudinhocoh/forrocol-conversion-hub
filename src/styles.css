@@ -92,7 +92,7 @@
 }
 
 @layer components {
-  .container-x { @apply max-w-7xl mx-auto px-5 md:px-8; }
+  .container-x { @apply max-w-[87.5rem] mx-auto px-5 md:px-8; }
   .btn-wa {
     background: var(--whatsapp);
     color: white;
