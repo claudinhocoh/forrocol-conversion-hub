@@ -17,6 +17,7 @@ import gal2 from "@/assets/gal-2.jpg";
 import gal3 from "@/assets/gal-3.jpg";
 import gal4 from "@/assets/gal-4.jpg";
 import logo from "@/assets/forrocol-logo-transparent.png";
+import logoRodape from "@/assets/logo-forrocol-rodape.png.asset.json";
 import forroPVC from "@/assets/forro-pvc.png.asset.json";
 import divisoriaEucatexPVC from "@/assets/divisoria-eucatex-pvc.png.asset.json";
 import plafons from "@/assets/plafons.png.asset.json";
@@ -374,7 +375,7 @@ function Index() {
       <footer id="contato" className="bg-ink text-white/85">
         <div className="container-x grid gap-10 py-16 lg:grid-cols-12">
           <div className="lg:col-span-4">
-            <img src={logo} alt="Forrocol" className="h-16 w-auto" />
+            <img src={logoRodape.url} alt="Forrocol" className="h-20 w-auto md:h-24" />
             <p className="mt-5 max-w-md text-sm leading-relaxed text-white/70">
               Há mais de 50 anos oferecendo soluções completas em forros, pisos, divisórias, ripados e acessórios para obras residenciais, comerciais e industriais com qualidade, tradição e atendimento especializado.
             </p>
@@ -385,9 +386,7 @@ function Index() {
 
           <div className="lg:col-span-2">
             <h4 className="text-sm font-bold uppercase tracking-wider text-gold">Atendimento</h4>
-            <div className="mt-4 overflow-hidden rounded-2xl border border-white/10 bg-white/5 p-3">
-              <img src={avatar.url} alt="Atendimento Forrocol" loading="lazy" className="h-full w-full object-cover" />
-            </div>
+            <img src={avatar.url} alt="Atendimento Forrocol" loading="lazy" className="mt-4 h-40 w-auto md:h-48" />
           </div>
 
           <div className="lg:col-span-3">
