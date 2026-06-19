@@ -17,6 +17,7 @@ import gal2 from "@/assets/gal-2.jpg";
 import gal3 from "@/assets/gal-3.jpg";
 import gal4 from "@/assets/gal-4.jpg";
 import logo from "@/assets/forrocol-logo-transparent.png";
+import logoRodape from "@/assets/logo-forrocol-rodape.png.asset.json";
 import forroPVC from "@/assets/forro-pvc.png.asset.json";
 import divisoriaEucatexPVC from "@/assets/divisoria-eucatex-pvc.png.asset.json";
 import plafons from "@/assets/plafons.png.asset.json";
