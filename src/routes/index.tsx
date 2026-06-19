@@ -386,9 +386,7 @@ function Index() {
 
           <div className="lg:col-span-2">
             <h4 className="text-sm font-bold uppercase tracking-wider text-gold">Atendimento</h4>
-            <div className="mt-4 overflow-hidden rounded-2xl border border-white/10 bg-white/5 p-3">
-              <img src={avatar.url} alt="Atendimento Forrocol" loading="lazy" className="h-full w-full object-cover" />
-            </div>
+            <img src={avatar.url} alt="Atendimento Forrocol" loading="lazy" className="mt-4 h-40 w-auto md:h-48" />
           </div>
 
           <div className="lg:col-span-3">
