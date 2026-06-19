@@ -375,7 +375,7 @@ function Index() {
       <footer id="contato" className="bg-ink text-white/85">
         <div className="container-x grid gap-10 py-16 lg:grid-cols-12">
           <div className="lg:col-span-4">
-            <img src={logo} alt="Forrocol" className="h-16 w-auto" />
+            <img src={logoRodape.url} alt="Forrocol" className="h-20 w-auto md:h-24" />
             <p className="mt-5 max-w-md text-sm leading-relaxed text-white/70">
               Há mais de 50 anos oferecendo soluções completas em forros, pisos, divisórias, ripados e acessórios para obras residenciais, comerciais e industriais com qualidade, tradição e atendimento especializado.
             </p>
