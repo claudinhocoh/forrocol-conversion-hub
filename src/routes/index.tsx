@@ -395,7 +395,7 @@ function Index() {
 
           <div className="lg:col-span-2">
             <h4 className="text-sm font-bold uppercase tracking-wider text-gold">Atendimento</h4>
-            <img src={avatar.url} alt="Atendimento Forrocol" loading="lazy" className="mt-4 h-40 w-auto md:h-48" />
+            <img src={avatar.url} alt="Atendimento Forrocol" loading="lazy" className="mt-4 h-56 w-auto md:h-72" />
           </div>
 
           <div className="lg:col-span-3">
