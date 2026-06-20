@@ -12,10 +12,6 @@ import {
 import hero from "@/assets/hero-interior.jpg";
 import pPisos from "@/assets/prod-pisos.jpg";
 import pRipados from "@/assets/prod-ripados.jpg";
-import gal1 from "@/assets/gal-1.jpg";
-import gal2 from "@/assets/gal-2.jpg";
-import gal3 from "@/assets/gal-3.jpg";
-import gal4 from "@/assets/gal-4.jpg";
 import logo from "@/assets/forrocol-logo-transparent.png";
 import logoRodape from "@/assets/logo-forrocol-rodape.png.asset.json";
 import forroPVC from "@/assets/forro-pvc.png.asset.json";
@@ -27,6 +23,12 @@ import produtosTermoacusticos from "@/assets/produtos-termoacusticos.png.asset.j
 import acessorios from "@/assets/acessorios.png.asset.json";
 import forrocolEmpresa from "@/assets/forrocol-empresa.png.asset.json";
 import avatar from "@/assets/avatar.png.asset.json";
+import galeria1 from "@/assets/galeria-1.png.asset.json";
+import galeria4 from "@/assets/galeria-4.png.asset.json";
+import galeria5 from "@/assets/galeria-5.png.asset.json";
+import galeria6 from "@/assets/galeria-6.png.asset.json";
+import galeria7 from "@/assets/galeria-7.png.asset.json";
+import galeriaRipado from "@/assets/galeria-ripado.png.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({
