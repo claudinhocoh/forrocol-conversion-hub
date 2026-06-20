@@ -12,10 +12,6 @@ import {
 import hero from "@/assets/hero-interior.jpg";
 import pPisos from "@/assets/prod-pisos.jpg";
 import pRipados from "@/assets/prod-ripados.jpg";
-import gal1 from "@/assets/gal-1.jpg";
-import gal2 from "@/assets/gal-2.jpg";
-import gal3 from "@/assets/gal-3.jpg";
-import gal4 from "@/assets/gal-4.jpg";
 import logo from "@/assets/forrocol-logo-transparent.png";
 import logoRodape from "@/assets/logo-forrocol-rodape.png.asset.json";
 import forroPVC from "@/assets/forro-pvc.png.asset.json";
@@ -27,6 +23,12 @@ import produtosTermoacusticos from "@/assets/produtos-termoacusticos.png.asset.j
 import acessorios from "@/assets/acessorios.png.asset.json";
 import forrocolEmpresa from "@/assets/forrocol-empresa.png.asset.json";
 import avatar from "@/assets/avatar.png.asset.json";
+import galeria1 from "@/assets/galeria-1.png.asset.json";
+import galeria4 from "@/assets/galeria-4.png.asset.json";
+import galeria5 from "@/assets/galeria-5.png.asset.json";
+import galeria6 from "@/assets/galeria-6.png.asset.json";
+import galeria7 from "@/assets/galeria-7.png.asset.json";
+import galeriaRipado from "@/assets/galeria-ripado.png.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -267,8 +269,15 @@ function Index() {
             <h2 className="mt-4 text-3xl md:text-5xl">Veja como o acabamento transforma o ambiente</h2>
           </div>
           <div className="mt-12 grid grid-cols-2 gap-3 md:grid-cols-4 md:gap-4">
-            {[gal1, gal2, gal3, gal4, forroPVC.url, plafons.url, forrosModulares.url, divisoriaEucatexPVC.url].map((src, i) => (
-              <div key={i} className={`overflow-hidden rounded-2xl ${i === 0 || i === 5 ? "md:col-span-2 md:row-span-2" : ""}`}>
+            {[
+              galeria1.url,
+              galeriaRipado.url,
+              galeria4.url,
+              galeria5.url,
+              galeria6.url,
+              galeria7.url,
+            ].map((src, i) => (
+              <div key={i} className={`overflow-hidden rounded-2xl ${i === 0 || i === 1 ? "md:col-span-2 md:row-span-2" : ""}`}>
                 <img src={src} loading="lazy" alt={`Projeto Forrocol ${i + 1}`} className="aspect-square h-full w-full object-cover transition-transform duration-700 hover:scale-105" />
               </div>
             ))}
