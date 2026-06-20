@@ -269,8 +269,15 @@ function Index() {
             <h2 className="mt-4 text-3xl md:text-5xl">Veja como o acabamento transforma o ambiente</h2>
           </div>
           <div className="mt-12 grid grid-cols-2 gap-3 md:grid-cols-4 md:gap-4">
-            {[gal1, gal2, gal3, gal4, forroPVC.url, plafons.url, forrosModulares.url, divisoriaEucatexPVC.url].map((src, i) => (
-              <div key={i} className={`overflow-hidden rounded-2xl ${i === 0 || i === 5 ? "md:col-span-2 md:row-span-2" : ""}`}>
+            {[
+              galeria1.url,
+              galeriaRipado.url,
+              galeria4.url,
+              galeria5.url,
+              galeria6.url,
+              galeria7.url,
+            ].map((src, i) => (
+              <div key={i} className={`overflow-hidden rounded-2xl ${i === 0 || i === 1 ? "md:col-span-2 md:row-span-2" : ""}`}>
                 <img src={src} loading="lazy" alt={`Projeto Forrocol ${i + 1}`} className="aspect-square h-full w-full object-cover transition-transform duration-700 hover:scale-105" />
               </div>
             ))}
