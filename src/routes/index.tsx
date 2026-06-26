@@ -433,9 +433,12 @@ function Index() {
           </div>
         </div>
         <div className="border-t border-white/10">
-          <div className="container-x flex flex-col items-center justify-between gap-2 py-5 text-xs text-white/55 md:flex-row">
+          <div className="container-x flex flex-col items-center justify-between gap-3 py-5 text-xs text-white/55 md:flex-row">
             <p>© {new Date().getFullYear()} Forrocol. Todos os direitos reservados.</p>
-            <p>Forros • Divisórias • Pisos • Ripados • Luminárias</p>
+            <div className="flex flex-wrap items-center justify-center gap-x-5 gap-y-1">
+              <a href="/privacidade" className="transition-colors hover:text-gold">Política de Privacidade</a>
+              <a href="/termos" className="transition-colors hover:text-gold">Termos de Uso</a>
+            </div>
           </div>
         </div>
       </footer>
