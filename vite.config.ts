@@ -1,15 +1,24 @@
-// @lovable.dev/vite-tanstack-config already includes the following — do NOT add them manually
-// or the app will break with duplicate plugins:
-//   - tanstackStart, viteReact, tailwindcss, tsConfigPaths, nitro (build-only using cloudflare as a default target),
-//     componentTagger (dev-only), VITE_* env injection, @ path alias, React/TanStack dedupe,
-//     error logger plugins, and sandbox detection (port/host/strictPort).
-// You can pass additional config via defineConfig({ vite: { ... }, etc... }) if needed.
+// Static-export configuration for cPanel/Apache hosting.
+// `npm run build` outputs a fully static site under `.output/public`.
+// Upload its contents to `public_html`. No Node server required.
 import { defineConfig } from "@lovable.dev/vite-tanstack-config";
 
 export default defineConfig({
+  // Nitro "static" preset → prerendered HTML + assets in .output/public.
+  // (Inside Lovable's hosted build this is forced to cloudflare; for your
+  // own `npm run build` the static preset applies.)
+  nitro: { preset: "static" },
   tanstackStart: {
-    // Redirect TanStack Start's bundled server entry to src/server.ts (our SSR error wrapper).
-    // nitro/vite builds from this
     server: { entry: "server" },
+    // SPA fallback: every non-prerendered URL receives the shell HTML and
+    // hydrates client-side. Combined with the .htaccess rewrite below this
+    // makes deep links work on Apache without a Node runtime.
+    spa: { enabled: true },
+    // Routes to prerender to real .html files at build time.
+    pages: [
+      { path: "/" },
+      { path: "/privacidade" },
+      { path: "/termos" },
+    ],
   },
 });

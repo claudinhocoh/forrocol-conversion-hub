@@ -1,0 +1,32 @@
+# Apache config for static SPA deployment (cPanel / public_html)
+# ---------------------------------------------------------------
+
+Options -MultiViews
+RewriteEngine On
+
+# Serve existing files and directories as-is
+RewriteCond %{REQUEST_FILENAME} -f [OR]
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteRule ^ - [L]
+
+# Pretty-URL → matching .html (e.g. /privacidade → /privacidade.html)
+RewriteCond %{REQUEST_FILENAME}.html -f
+RewriteRule ^(.*)$ $1.html [L]
+
+# SPA fallback: everything else loads the shell and the client router handles it
+RewriteRule ^ /index.html [L]
+
+# Compression
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html text/plain text/css text/javascript application/javascript application/json image/svg+xml
+</IfModule>
+
+# Cache hashed build assets aggressively, HTML never
+<IfModule mod_headers.c>
+  <FilesMatch "\.(js|css|woff2?|ttf|otf|png|jpe?g|gif|webp|avif|svg|ico)$">
+    Header set Cache-Control "public, max-age=31536000, immutable"
+  </FilesMatch>
+  <FilesMatch "\.html$">
+    Header set Cache-Control "no-cache, must-revalidate"
+  </FilesMatch>
+</IfModule>
